@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "UUC3aAHPFLC693/c3Ey1WHInaQj2AWWjzUv6nURN7n45fUJ2oqracA462gF8x97CJ/49t5V7yW0Kvonj9atz8Q==",
+  "success": true,
+  "projectFilePath": "/Users/yelinliu/Documents/GitHub/komon/komon/Assets/Scripts/dotnet-console-games/Projects/Maze/Maze.csproj",
+  "expectedPackageFiles": [
+    "/Users/yelinliu/.nuget/packages/towel/1.0.40/towel.1.0.40.nupkg.sha512"
+  ],
+  "logs": []
+}

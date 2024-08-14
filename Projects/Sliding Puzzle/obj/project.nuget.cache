@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "e8WELUzZ5kYuzkecvXP05gPyOrWZ/N+yUx/HrA680PPR0fkv6KLDEq5hHEc3PZglRUbdYqhSudpenW6i58oBGg==",
+  "success": true,
+  "projectFilePath": "/Users/yelinliu/Documents/GitHub/komon/komon/Assets/Scripts/dotnet-console-games/Projects/Sliding Puzzle/Sliding Puzzle.csproj",
+  "expectedPackageFiles": [
+    "/Users/yelinliu/.nuget/packages/towel/1.0.40/towel.1.0.40.nupkg.sha512"
+  ],
+  "logs": []
+}
