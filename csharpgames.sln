@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projects", "Projects", "{90
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessNumber", "Projects\GuessNumber\GuessNumber.csproj", "{27BF5AE7-103D-45B7-8220-DC571FF2EE6F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBook", "AddressBook\AddressBook.csproj", "{D380C12D-6E67-4B1B-A185-D51B073A17C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{27BF5AE7-103D-45B7-8220-DC571FF2EE6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27BF5AE7-103D-45B7-8220-DC571FF2EE6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27BF5AE7-103D-45B7-8220-DC571FF2EE6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D380C12D-6E67-4B1B-A185-D51B073A17C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D380C12D-6E67-4B1B-A185-D51B073A17C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D380C12D-6E67-4B1B-A185-D51B073A17C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D380C12D-6E67-4B1B-A185-D51B073A17C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{27BF5AE7-103D-45B7-8220-DC571FF2EE6F} = {90CE14D5-01F7-46BB-9F45-A4A8526C7ADF}
