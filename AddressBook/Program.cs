@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
+﻿
 class Program
 {
     public static void Main()
@@ -57,6 +56,32 @@ class AddressBook
                 Console.WriteLine($"Email: {contact.Email}");
                 index++;
             }
+        }
+    }
+
+    public void EditContact()
+    {
+        Console.WriteLine("Please input the exact name of the contact");
+        string name = Console.ReadLine() ?? "";
+        Contact? findContact = null;
+        foreach (Contact contact in contacts)
+        {
+            if (contact.Name == name)
+            {
+                findContact = contact;
+            }
+        }
+        if (findContact == null)
+        {
+            Console.WriteLine("Can't find the contact.");
+            return;
+        }
+        else
+        {
+            Console.WriteLine("Please input the new contact name");
+            string newName = Console.ReadLine() ?? "";
+            
+
         }
     }
 
