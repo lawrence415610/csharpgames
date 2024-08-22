@@ -23,6 +23,9 @@ class Program
                 case "2":
                     addressBook.AddContact();
                     break;
+                case "5":
+                    addressBook.FindContact();
+                    break;
             }
 
             Console.WriteLine("Press any key to continue...");
@@ -76,12 +79,22 @@ class AddressBook
 
     public void FindContact()
     {
-
+        Console.WriteLine("Please input the name you want to search");
+        string name = Console.ReadLine() ?? "";
+        foreach (Contact contact in contacts)
+        {
+            int index = 1;
+            if (contact.Name.Contains(name))
+            {
+                Console.WriteLine($"{index}. Name: {contact.Name}, Email: {contact.Email}");
+                index++;
+            }
+        }
     }
 }
 
 class Contact(string name, string email)
 {
-    public string? Name { get; set; } = name;
+    public string Name { get; set; } = name;
     public string? Email { get; set; } = email;
 }
