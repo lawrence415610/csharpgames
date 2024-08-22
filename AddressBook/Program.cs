@@ -13,7 +13,7 @@ class Program
             Console.WriteLine("2. Add a contact");
             Console.WriteLine("3. Edit a contact");
             Console.WriteLine("4. Delete a contact");
-            Console.WriteLine("5. Check a contact");
+            Console.WriteLine("5. Find a contact");
 
             switch (Console.ReadLine())
             {
@@ -22,6 +22,9 @@ class Program
                     break;
                 case "2":
                     addressBook.AddContact();
+                    break;
+                case "4":
+                    addressBook.DeleteContact();
                     break;
                 case "5":
                     addressBook.FindContact();
@@ -77,23 +80,50 @@ class AddressBook
         Console.WriteLine($"Contact {newContact.Name} has been added");
     }
 
-    public void FindContact()
+    public void DeleteContact()
+    {
+        List<Contact> findContact = FindContact();
+        Console.WriteLine($"We find {findContact.Count} contacts:");
+        for (int i = 1; i <= findContact.Count; i++)
+        {
+            Console.WriteLine($"{i}. {findContact[i - 1].Name}");
+        }
+        Console.WriteLine("Do you wish to continue? Y/N");
+        ConsoleKeyInfo keyInfo = Console.ReadKey(true);
+        if (keyInfo.Key == ConsoleKey.Y)
+        {
+            foreach (Contact contact in findContact)
+            {
+                contacts.Remove(contact);
+                Console.WriteLine($"{contact.Name} has been removed.");
+            }
+
+        }
+        else
+        {
+            return;
+        }
+    }
+
+    public List<Contact> FindContact()
     {
         Console.WriteLine("Please input the name you want to search");
         string name = Console.ReadLine() ?? "";
+        List<Contact> findContacts = [];
         foreach (Contact contact in contacts)
         {
-            int index = 1;
-            if (contact.Name.Contains(name))
+            if (contact.Name.Contains(name, StringComparison.CurrentCultureIgnoreCase))
             {
-                Console.WriteLine($"{index}. Name: {contact.Name}, Email: {contact.Email}");
-                index++;
+                Console.WriteLine($"Name: {contact.Name}, Email: {contact.Email}");
+                findContacts.Add(contact);
             }
         }
+
+        return findContacts;
     }
 }
 
-class Contact(string name, string email)
+class Contact(string name, string? email)
 {
     public string Name { get; set; } = name;
     public string? Email { get; set; } = email;
